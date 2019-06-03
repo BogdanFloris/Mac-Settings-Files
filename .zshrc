@@ -8,7 +8,7 @@ export ZSH="/Users/bogdanfloris/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="refined"
+ZSH_THEME="fishy2"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -65,15 +65,14 @@ ZSH_THEME="refined"
 plugins=(
   git
   osx
-  autopep8
   brew
-  django
   docker
   forklift
   jsontools
   vscode
   python
-
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -106,4 +105,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# EXPORT PATHS
 export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="/Applications/MATLAB_R2018b.app/bin:$PATH"
+export PATH="/Users/bogdanfloris/Library/Python/3.7/bin:$PATH"
+export GOPATH="$HOME/Workspace/Code/Go"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bogdanfloris/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bogdanfloris/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bogdanfloris/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bogdanfloris/google-cloud-sdk/completion.zsh.inc'; fi
